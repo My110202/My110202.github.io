@@ -1,101 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+
+
+<html lang="zh-CN">
+
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#34495e">
-  <title>Mayue</title>
-  <link rel="alternate" href="path/of/rss" type="application/atom+xml">
-  <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+  <meta charset="utf-8" />
+   
+  <meta name="keywords" content="坚持学习" />
+   
+  <meta name="description" content="记录你我" />
   
-<link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+     Mayue
+  </title>
+  <meta name="generator" content="hexo-theme-ayer">
+  
+  <link rel="shortcut icon" href="/favicon.ico" />
+  
+  
+<link rel="stylesheet" href="/dist/main.css">
+
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+  
+  
 
   
 
-  
+<link rel="alternate" href="/atom.xml" title="Mayue" type="application/atom+xml">
+</head>
 
-  
-
-  
-
-<meta name="generator" content="Hexo 4.2.1"></head>
+</html>
 
 <body>
-  <div class="mobile-header">
-    <span><i class="iconfont icon-turnon" id="mobile-nav-toggle"></i></span>
-    <div class="mobile-logo">
-      <a href="/.">mayue</a>
-    </div>
-  </div>
-  <div class="page" id="mobile-nav-panel">
-    <div class="container">
-      <header class="site-nav">
-      <div class="nav-content">
-        <div class="logo">
-          <a href="/">mayue</a>
-        </div>
-        <nav class="navbar">
-          <ul>
-            
-              <li class="menu-item">
-                <a href="/" class="menu-item-link"><i class="iconfont icon-home"></i>首页</a>
-              </li>
-            
-              <li class="menu-item">
-                <a href="/archives" class="menu-item-link"><i class="iconfont icon-archive"></i>归档</a>
-              </li>
-            
-              <li class="menu-item">
-                <a href="/categories" class="menu-item-link"><i class="iconfont icon-category"></i>分类</a>
-              </li>
-            
-              <li class="menu-item">
-                <a href="/tags" class="menu-item-link"><i class="iconfont icon-tags"></i>标签</a>
-              </li>
-            
-              <li class="menu-item">
-                <a href="/about" class="menu-item-link"><i class="iconfont icon-about"></i>关于</a>
-              </li>
-            
-          </ul>
-        </nav>
-      </div>
-</header>
-
-      <div class="banner">
-  <div class="show">
-    <!-- <img src="/" alt="banner"> -->
-    <div class="banner-title">
+  <div id="app">
+    
       
-        <div class="intro">
-          practice makes perfect
-        </div>
+    <main class="content on">
       
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
     </div>
-  </div>
-</div>
-
-      <main class="main"id="main">
-          <section class="posts">
-  
-    <article class="post" id="post-excerpt">
-      <header>
-        <div class="post-title">
-          <h1><a class="post-title-link" href="/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/">my面试代码题</a></h1>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><i class="iconfont icon-calendar"></i>2020-06-07</span>
-          
-          <!---------------------------------------->
-            
-        <!----------------------------------------->
-        </div>
-      </header>
-      <div class="post-content">
-        <!-------------->
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Mayue</a></h1>
+      <div id="subtitle-box">
         
-          <h1 id="关于发送异步请求"><a href="#关于发送异步请求" class="headerlink" title="关于发送异步请求"></a>关于发送异步请求</h1><h2 id="1-原生ajax发get请求"><a href="#1-原生ajax发get请求" class="headerlink" title="1.原生ajax发get请求"></a>1.原生ajax发get请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line">	<span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.设置open()方法,get/post请求的地址</span></span><br><span class="line">	xhr.open(<span class="string">'get'</span>,<span class="string">'url地址'</span>) <span class="comment">// 参数1:请求的方法,参数2:请求的地址,参数以问号的形式拼接在请求地址后面</span></span><br><span class="line"><span class="comment">//3.设置响应成功后的回调函数</span></span><br><span class="line">	xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//在onload事件里拿到服务器返回的数据</span></span><br><span class="line">		<span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//4.发送请求</span></span><br><span class="line">	xhr.send()</span><br></pre></td></tr></table></figure>
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+
+<div id="main">
+  <section class="outer">
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-my面试代码题"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/"
+    >my面试代码题</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/" class="article-date">
+  <time datetime="2020-06-07T08:45:56.818Z" itemprop="datePublished">2020-06-07</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="关于发送异步请求"><a href="#关于发送异步请求" class="headerlink" title="关于发送异步请求"></a>关于发送异步请求</h1><h2 id="1-原生ajax发get请求"><a href="#1-原生ajax发get请求" class="headerlink" title="1.原生ajax发get请求"></a>1.原生ajax发get请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line">	<span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.设置open()方法,get/post请求的地址</span></span><br><span class="line">	xhr.open(<span class="string">'get'</span>,<span class="string">'url地址'</span>) <span class="comment">// 参数1:请求的方法,参数2:请求的地址,参数以问号的形式拼接在请求地址后面</span></span><br><span class="line"><span class="comment">//3.设置响应成功后的回调函数</span></span><br><span class="line">	xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//在onload事件里拿到服务器返回的数据</span></span><br><span class="line">		<span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//4.发送请求</span></span><br><span class="line">	xhr.send()</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-原生ajax发post请求"><a href="#2-原生ajax发post请求" class="headerlink" title="2.原生ajax发post请求"></a>2.原生ajax发post请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.调用open方法设置请求方式和请求地址</span></span><br><span class="line">xhr.open(<span class="string">'post'</span>,<span class="string">'url地址'</span>)</span><br><span class="line"><span class="comment">//3.监听响应完成事件</span></span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//4.post请求方式要设置非请求头</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>)</span><br><span class="line"><span class="comment">//5.发送请求,多个参数之间也是用&amp;连接</span></span><br><span class="line">xhr.send(<span class="string">'参数'</span>)</span><br></pre></td></tr></table></figure>
 
@@ -278,32 +297,53 @@
 
 
 
-
-        
-        <!-------------->
-      </div>
-      <div class="post-tags">
+ 
+      <!-- reward -->
       
     </div>
-    </article>
-  
-    <article class="post" id="post-excerpt">
-      <header>
-        <div class="post-title">
-          <h1><a class="post-title-link" href="/2020/06/06/git%E5%91%BD%E4%BB%A4/">git命令</a></h1>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><i class="iconfont icon-calendar"></i>2020-06-06</span>
-          
-          <!---------------------------------------->
-            
-        <!----------------------------------------->
-        </div>
-      </header>
-      <div class="post-content">
-        <!-------------->
-        
-          <h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-git命令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/06/git%E5%91%BD%E4%BB%A4/"
+    >git命令</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/06/git%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-06-06T15:45:42.249Z" itemprop="datePublished">2020-06-06</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
 
 <h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config -l	查看现在的git环境的详细配置</span><br></pre></td></tr></table></figure>
 
@@ -352,57 +392,99 @@
 
 <h4 id="git-stash-show"><a href="#git-stash-show" class="headerlink" title="git stash show"></a>git stash show</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">显示stash的具体内容是什么,用法:git stash show stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
 
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
-        
-        <!-------------->
-      </div>
-      <div class="post-tags">
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="my-Post"
+  class="article article-type-my"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/06/Post/"
+    >Post</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/06/Post/" class="article-date">
+  <time datetime="2020-06-06T15:38:09.000Z" itemprop="datePublished">2020-06-06</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
       
     </div>
-    </article>
-  
-    <article class="post" id="post-excerpt">
-      <header>
-        <div class="post-title">
-          <h1><a class="post-title-link" href="/2020/06/06/Post/">Post</a></h1>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><i class="iconfont icon-calendar"></i>2020-06-06</span>
-          
-          <!---------------------------------------->
-            
-        <!----------------------------------------->
-        </div>
-      </header>
-      <div class="post-content">
-        <!-------------->
-        
-          
-        
-        <!-------------->
-      </div>
-      <div class="post-tags">
-      
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-hello-world"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/06/hello-world/"
+    >Hello World</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/06/hello-world/" class="article-date">
+  <time datetime="2020-06-06T13:28:40.503Z" itemprop="datePublished">2020-06-06</time>
+</a>    
     </div>
-    </article>
-  
-    <article class="post" id="post-excerpt">
-      <header>
-        <div class="post-title">
-          <h1><a class="post-title-link" href="/2020/06/06/hello-world/">Hello World</a></h1>
-        </div>
-        <div class="post-meta">
-          <span class="post-time"><i class="iconfont icon-calendar"></i>2020-06-06</span>
-          
-          <!---------------------------------------->
-            
-        <!----------------------------------------->
-        </div>
-      </header>
-      <div class="post-content">
-        <!-------------->
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -415,127 +497,400 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-        <!-------------->
-      </div>
-      <div class="post-tags">
+ 
+      <!-- reward -->
       
     </div>
-    </article>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+  </article>
+  
+
   
 </section>
-
-          
-     <nav class="pagination">
-    
-    
-  </nav>
-
-
-          
-
-      </main>
-    </div>
-    <footer>
-      <div class="social-links">
-        
-          
-            <a href="https://www.zhihu.com/" target="_blank" rel="noopener"><i class="iconfont icon-zhihu"></i></a>
-          
-        
-          
-            <a href="https://weibo.com" target="_blank" rel="noopener"><i class="iconfont icon-weibo"></i></a>
-          
-        
-          
-            <a href="https://github.com/" target="_blank" rel="noopener"><i class="iconfont icon-github"></i></a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-      
-        <div class="quote">
-          <p>Love all, trust a few, do wrong to none.——William Shakespeare</p>
-        </div>
-      
-      <div class="copyright">
-        <p>
-          由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 强力驱动
-          <span>|</span>
-          主题 - <a href="https://github.com/wa-ri/hexo-theme-ztopic" target="_blank" rel="noopener">ztopic</a
-        </p>
-        <p>
-          <span>
-          
-          &copy;
-          
-            2020
-          
-          </span>
-          <i class="iconfont icon-circle"></i>
-          <span>Mayue</span>
-        </p>
-      </div>
-</footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  <div id="mobile-nav">
-  <nav id="mobile-nav-menu">
-    
-      <a href="/" class="mobile-nav-link"><i class="iconfont icon-home"></i>首页</a>
-    
-      <a href="/archives" class="mobile-nav-link"><i class="iconfont icon-archive"></i>归档</a>
-    
-      <a href="/categories" class="mobile-nav-link"><i class="iconfont icon-category"></i>分类</a>
-    
-      <a href="/tags" class="mobile-nav-link"><i class="iconfont icon-tags"></i>标签</a>
-    
-      <a href="/about" class="mobile-nav-link"><i class="iconfont icon-about"></i>关于</a>
-    
-    <div class="mobile-intro"><i class="iconfont icon-pen"></i>practice makes perfect</div>
-  </nav>
 </div>
 
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2020
+        <i class="ri-heart-fill heart_icon"></i> Mayue
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        
+        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
+        <span class="division">|</span>
+        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
 
-  
-<script src="/libs/jQuery/jquery-3.2.1.min.js"></script>
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
 
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
   
-<script src="/libs/slideout/slideout.min.js"></script>
-
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Mayue"></a>
+  </div>
   
+  <ul class="nav nav-main">
     
-<link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css">
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
+    </script>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Subtitle -->
+
+<script>
+  try {
+    var typed = new Typed("#subtitle", {
+      strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+      startDelay: 0,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 100,
+      showCursor: true
+    });
+  } catch (err) {
+    console.log(err)
+  }
+</script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script>
+
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+
+
+<link rel="stylesheet" href="/css/clipboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+<!-- CanvasBackground -->
+
 
     
-<script src="/libs/fancybox/jquery.fancybox.pack.js"></script>
-
-  
-  
-
-  
-<script src="/js/ztopic.js"></script>
-
+  </div>
 </body>
+
 </html>
