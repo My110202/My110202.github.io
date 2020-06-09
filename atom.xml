@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-29T08:48:55.176Z</updated>
+  <updated>2020-06-09T12:29:40.858Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>my面试代码题</title>
-    <link href="http://yoursite.com/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/"/>
-    <id>http://yoursite.com/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/</id>
-    <published>2020-06-07T08:45:56.818Z</published>
-    <updated>2020-05-29T08:48:55.176Z</updated>
+    <title>git使用记录</title>
+    <link href="http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-06-08T16:00:00.000Z</published>
+    <updated>2020-06-09T12:29:40.858Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,71 @@
       
         
         
-          &lt;h1 id=&quot;关于发送异步请求&quot;&gt;&lt;a href=&quot;#关于发送异步请求&quot; class=&quot;headerlink&quot; title=&quot;关于发送异步请求&quot;&gt;&lt;/a&gt;关于发送异步请求&lt;/h1&gt;&lt;h2 id=&quot;1-原生ajax发get请求&quot;&gt;&lt;a
+          &lt;h3 id=&quot;git-bash-unix与linux风格的命令行-使用最多&quot;&gt;&lt;a href=&quot;#git-bash-unix与linux风格的命令行-使用最多&quot; class=&quot;headerlink&quot; title=&quot;git bash:
         
       
     
     </summary>
     
     
+      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue相关面试题</title>
+    <link href="http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
+    <published>2020-06-08T16:00:00.000Z</published>
+    <updated>2020-06-09T12:58:55.546Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-对vue的理解&quot;&gt;&lt;a href=&quot;#1-对vue的理解&quot; class=&quot;headerlink&quot; title=&quot;1.对vue的理解&quot;&gt;&lt;/a&gt;1.对vue的理解&lt;/h2&gt;&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="web前端面试" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码面试题</title>
+    <link href="http://yoursite.com/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/"/>
+    <id>http://yoursite.com/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/</id>
+    <published>2020-06-08T16:00:00.000Z</published>
+    <updated>2020-06-09T13:00:16.082Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;关于发送异步请求&quot;&gt;&lt;a href=&quot;#关于发送异步请求&quot; class=&quot;headerlink&quot; title=&quot;关于发送异步请求&quot;&gt;&lt;/a&gt;关于发送异步请求&lt;/h2&gt;&lt;h2 id=&quot;1-原生ajax发get请求&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="web前端面试" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
     
   </entry>
   

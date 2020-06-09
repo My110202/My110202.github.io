@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    my面试代码题 |  Mayue
+    代码面试题 |  Mayue
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -63,16 +63,20 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  my面试代码题
+  代码面试题
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/" class="article-date">
-  <time datetime="2020-06-07T08:45:56.818Z" itemprop="datePublished">2020-06-07</time>
-</a>   
+      <a href="/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/" class="article-date">
+  <time datetime="2020-06-08T16:00:00.000Z" itemprop="datePublished">2020-06-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">web前端面试</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
@@ -102,7 +106,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="关于发送异步请求"><a href="#关于发送异步请求" class="headerlink" title="关于发送异步请求"></a>关于发送异步请求</h1><h2 id="1-原生ajax发get请求"><a href="#1-原生ajax发get请求" class="headerlink" title="1.原生ajax发get请求"></a>1.原生ajax发get请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line">	<span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.设置open()方法,get/post请求的地址</span></span><br><span class="line">	xhr.open(<span class="string">'get'</span>,<span class="string">'url地址'</span>) <span class="comment">// 参数1:请求的方法,参数2:请求的地址,参数以问号的形式拼接在请求地址后面</span></span><br><span class="line"><span class="comment">//3.设置响应成功后的回调函数</span></span><br><span class="line">	xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//在onload事件里拿到服务器返回的数据</span></span><br><span class="line">		<span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//4.发送请求</span></span><br><span class="line">	xhr.send()</span><br></pre></td></tr></table></figure>
+  <h2 id="关于发送异步请求"><a href="#关于发送异步请求" class="headerlink" title="关于发送异步请求"></a>关于发送异步请求</h2><h2 id="1-原生ajax发get请求"><a href="#1-原生ajax发get请求" class="headerlink" title="1.原生ajax发get请求"></a>1.原生ajax发get请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line">	<span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.设置open()方法,get/post请求的地址</span></span><br><span class="line">	xhr.open(<span class="string">'get'</span>,<span class="string">'url地址'</span>) <span class="comment">// 参数1:请求的方法,参数2:请求的地址,参数以问号的形式拼接在请求地址后面</span></span><br><span class="line"><span class="comment">//3.设置响应成功后的回调函数</span></span><br><span class="line">	xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//在onload事件里拿到服务器返回的数据</span></span><br><span class="line">		<span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//4.发送请求</span></span><br><span class="line">	xhr.send()</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-原生ajax发post请求"><a href="#2-原生ajax发post请求" class="headerlink" title="2.原生ajax发post请求"></a>2.原生ajax发post请求</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.创建xhr对象</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">//2.调用open方法设置请求方式和请求地址</span></span><br><span class="line">xhr.open(<span class="string">'post'</span>,<span class="string">'url地址'</span>)</span><br><span class="line"><span class="comment">//3.监听响应完成事件</span></span><br><span class="line">xhr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(xhr.responseText)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//4.post请求方式要设置非请求头</span></span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-type'</span>,<span class="string">'application/x-www-form-urlencoded'</span>)</span><br><span class="line"><span class="comment">//5.发送请求,多个参数之间也是用&amp;连接</span></span><br><span class="line">xhr.send(<span class="string">'参数'</span>)</span><br></pre></td></tr></table></figure>
 
@@ -122,7 +126,7 @@
 
 <h2 id="10-用户在浏览器输入地址后否发生了什么事"><a href="#10-用户在浏览器输入地址后否发生了什么事" class="headerlink" title="10. 用户在浏览器输入地址后否发生了什么事"></a>10. 用户在浏览器输入地址后否发生了什么事</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">step0:当用户输入地址回车之后,浏览器首先会把这个地址交给DNS域名解析器,然后DNS查找到对应的域名返回给浏览器</span><br><span class="line">step1:浏览器发送请求给服务器</span><br><span class="line">step2:服务器端接收到请求 并 获取浏览器需要的资源</span><br><span class="line">step3:服务器将获取到的数据响应给浏览器</span><br><span class="line">step4:浏览器接收响应的数据</span><br><span class="line">step5:浏览器通过js引擎来解析js,通过渲染引擎来渲染html,css</span><br><span class="line">step6:将内容显示给用户</span><br></pre></td></tr></table></figure>
 
-<h1 id="vue-相关面试题"><a href="#vue-相关面试题" class="headerlink" title="vue 相关面试题"></a>vue 相关面试题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue:vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br><span class="line">vue 是什么:是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应	    式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br></pre></td></tr></table></figure>
+<h2 id="vue-相关面试题"><a href="#vue-相关面试题" class="headerlink" title="vue 相关面试题"></a>vue 相关面试题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Vue:vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br><span class="line">vue 是什么:是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应	    式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br></pre></td></tr></table></figure>
 
 <h2 id="1-框架和库的区别"><a href="#1-框架和库的区别" class="headerlink" title="1.框架和库的区别"></a>1.框架和库的区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">框架:是一套完整的解决方案;对项目的侵入性较大,项目如果需要更换框架,则需要重新架构整个项目</span><br><span class="line">库(插件):提供某一个小功能,对项目的侵入性较小,如果某个库无法完成某些需求,可以很容易的切换到其他库实         现需求</span><br></pre></td></tr></table></figure>
 
@@ -150,7 +154,7 @@
 
 <h2 id="12-vue的set方法"><a href="#12-vue的set方法" class="headerlink" title="12.vue的set方法"></a>12.vue的set方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">		obj:&#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 想动态的给obj添加属性,最好用set方法</span></span><br><span class="line">created()&#123;</span><br><span class="line">	<span class="keyword">this</span>.$<span class="keyword">set</span>(this.obj,'name','Jack')</span><br><span class="line">	// 参数1是对象,参数二是对象添加的属性,参数3是对象的属性的值,这种方法添加属性能保证数据双向绑定</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="vue组件之间的传参"><a href="#vue组件之间的传参" class="headerlink" title="vue组件之间的传参"></a>vue组件之间的传参</h1><h2 id="1-父组件给子组件传参"><a href="#1-父组件给子组件传参" class="headerlink" title="1.父组件给子组件传参"></a>1.父组件给子组件传参</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">步骤:1.父传	2.子接</span><br><span class="line">父传:父组件中有一个参数,通过自定义组件传递给子组件</span><br><span class="line">子接:通过props属性来进行接收</span><br><span class="line">	补充:props的属性值可以是数组[],也可以是对象&#123;&#125;</span><br><span class="line">比如说参数名是datamsg</span><br><span class="line">	数组:props:[&#39;datamsg&#39;]</span><br><span class="line">	对象:props:&#123;</span><br><span class="line">		datamsg:&#123;</span><br><span class="line">			type:String,	&#x2F;&#x2F;参数的数据类型</span><br><span class="line">			default:&#39;默认值&#39; &#x2F;&#x2F;参数的默认值</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="vue组件之间的传参"><a href="#vue组件之间的传参" class="headerlink" title="vue组件之间的传参"></a>vue组件之间的传参</h2><h2 id="1-父组件给子组件传参"><a href="#1-父组件给子组件传参" class="headerlink" title="1.父组件给子组件传参"></a>1.父组件给子组件传参</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">步骤:1.父传	2.子接</span><br><span class="line">父传:父组件中有一个参数,通过自定义组件传递给子组件</span><br><span class="line">子接:通过props属性来进行接收</span><br><span class="line">	补充:props的属性值可以是数组[],也可以是对象&#123;&#125;</span><br><span class="line">比如说参数名是datamsg</span><br><span class="line">	数组:props:[&#39;datamsg&#39;]</span><br><span class="line">	对象:props:&#123;</span><br><span class="line">		datamsg:&#123;</span><br><span class="line">			type:String,	&#x2F;&#x2F;参数的数据类型</span><br><span class="line">			default:&#39;默认值&#39; &#x2F;&#x2F;参数的默认值</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 在父组件中的代码,父组件中与一个参数,通过自定义属性传递给子组件</span><br><span class="line">&lt;h1&gt;我是父组件&lt;&#x2F;h1&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">   msg: &#123;&#123; msg &#125;&#125;	&#x2F;&#x2F;父组件中的参数msg</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;son v-bind:data&#x3D;&quot;msg&quot;&gt;&lt;&#x2F;son&gt;	&#x2F;&#x2F;通过自定义属性data传递给子组件son</span><br></pre></td></tr></table></figure>
 
@@ -347,16 +351,27 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/06/07/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
+    
+      <a href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            vue相关面试题
+          
+        </div>
+      </a>
     
     
       <a href="/2020/06/06/Post/" class="article-nav-link">
