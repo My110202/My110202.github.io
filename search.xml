@@ -12,6 +12,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Post</title>
+    <url>/2020/06/06/Post/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/06/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>git使用记录</title>
     <url>/2020/06/09/git%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
@@ -72,11 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Post</title>
-    <url>/2020/06/06/Post/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>vue.config.js配置的理解</title>
     <url>/2020/06/11/vue.config.js/</url>
     <content><![CDATA[<h2 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h2><h4 id="publicPath"><a href="#publicPath" class="headerlink" title="publicPath"></a>publicPath</h4><ul>
@@ -106,24 +124,6 @@
       <tags>
         <tag>vue webpack</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/06/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>vue相关面试题</title>
@@ -160,6 +160,47 @@
       </categories>
       <tags>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端项目工具合集解读</title>
+    <url>/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/</url>
+    <content><![CDATA[<h2 id="1-vue-js"><a href="#1-vue-js" class="headerlink" title="1.vue.js"></a>1.vue.js</h2><h3 id="vue是什么"><a href="#vue是什么" class="headerlink" title="vue是什么"></a>vue是什么</h3><ul>
+<li>vue.js是一套用于构建用户界面的渐进式框架.</li>
+<li>简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.</li>
+</ul>
+<h3 id="vue的MVVM设计模式是什么"><a href="#vue的MVVM设计模式是什么" class="headerlink" title="vue的MVVM设计模式是什么"></a>vue的MVVM设计模式是什么</h3><ul>
+<li>mvvm 是 model(模型层) view(视图层) viewmodel(模型层与视图层的调度者)的缩写。mvvm提供了数据的双向绑定，通过双向数据绑定把model层和view层连接起来，不用操作dom。</li>
+</ul>
+<h3 id="vue的两个核心"><a href="#vue的两个核心" class="headerlink" title="vue的两个核心"></a>vue的两个核心</h3><ul>
+<li>1.响应式的数据绑定：当数据发生改变，视图可以自动更新，可以不用关心dom操作，而专心数据处理。</li>
+<li>2.可组合的视图组件：一个页面可以看作是若干个小的组件组合拼接而成，并且小的组件也方便的复用。</li>
+</ul>
+<h2 id="2-vueCLI"><a href="#2-vueCLI" class="headerlink" title="2.vueCLI"></a>2.vueCLI</h2><h3 id="vuecli是什么"><a href="#vuecli是什么" class="headerlink" title="vuecli是什么"></a>vuecli是什么</h3><ul>
+<li>vueCLI是用于快速vue.js开发的完整系统.</li>
+</ul>
+<h3 id="使用vuecli的目的"><a href="#使用vuecli的目的" class="headerlink" title="使用vuecli的目的"></a>使用vuecli的目的</h3><ul>
+<li>1.提供了零配置快速原型</li>
+<li>2.提供了运行时依赖</li>
+<li>3.提供了丰富的官方插件库</li>
+<li>4.完整的图形用户界面。</li>
+</ul>
+<h2 id="3-webpack"><a href="#3-webpack" class="headerlink" title="3.webpack"></a>3.webpack</h2><h3 id="webpack是什么"><a href="#webpack是什么" class="headerlink" title="webpack是什么"></a>webpack是什么</h3><ul>
+<li><em>webpack</em> 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。静态资源（js，css，less，scss，html，图片等）</li>
+<li>简单理解就是一个前端项目的打包工具</li>
+</ul>
+<h2 id="4-node-js"><a href="#4-node-js" class="headerlink" title="4.node.js"></a>4.node.js</h2><h2 id="5-vue，vuecli，webpack的关系"><a href="#5-vue，vuecli，webpack的关系" class="headerlink" title="5.vue，vuecli，webpack的关系"></a>5.vue，vuecli，webpack的关系</h2><ul>
+<li>vueCLI是vue的脚手架，其作用就是自动生成vue+webpack的项目模板，包括依赖库，一些插件等。</li>
+</ul>
+<h2 id="6-vue，webpack，node-js的关系"><a href="#6-vue，webpack，node-js的关系" class="headerlink" title="6.vue，webpack，node.js的关系"></a>6.vue，webpack，node.js的关系</h2><ul>
+<li>vue是可以快速生成前端项目的一个框架，webpack是前端项目的打包工具，而webpack的运行环境又是基于node.js开发出来的,没有node是打包不了的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>vue相关</category>
+      </categories>
+      <tags>
+        <tag>vue vueCLI webpack node.js</tag>
       </tags>
   </entry>
   <entry>
