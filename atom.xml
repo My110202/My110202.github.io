@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-13T09:08:05.334Z</updated>
+  <updated>2020-06-13T09:26:39.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,14 @@
     <link href="http://yoursite.com/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/"/>
     <id>http://yoursite.com/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/</id>
     <published>2020-06-12T16:00:00.000Z</published>
-    <updated>2020-06-13T09:08:05.334Z</updated>
+    <updated>2020-06-13T09:26:39.179Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-vue-js&quot;&gt;&lt;a href=&quot;#1-vue-js&quot; class=&quot;headerlink&quot; title=&quot;1.vue.js&quot;&gt;&lt;/a&gt;1.vue.js&lt;/h2&gt;&lt;h3 id=&quot;vue是什么&quot;&gt;&lt;a href=&quot;#vue是什么&quot;
-        
-      
+      &lt;h2 id=&quot;1-vue-js&quot;&gt;&lt;a href=&quot;#1-vue-js&quot; class=&quot;headerlink&quot; title=&quot;1.vue.js&quot;&gt;&lt;/a&gt;1.vue.js&lt;/h2&gt;&lt;h3 id=&quot;vue是什么&quot;&gt;&lt;a href=&quot;#vue是什么&quot; class=&quot;headerlink&quot; title=&quot;vue是什么&quot;&gt;&lt;/a&gt;vue是什么&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;vue.js是一套用于构建用户界面的渐进式框架.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.  &lt;/p&gt;
     
     </summary>
     
@@ -48,17 +45,14 @@
     <link href="http://yoursite.com/2020/06/11/vue.config.js/"/>
     <id>http://yoursite.com/2020/06/11/vue.config.js/</id>
     <published>2020-06-10T16:00:00.000Z</published>
-    <updated>2020-06-12T05:04:32.434Z</updated>
+    <updated>2020-06-13T09:27:32.552Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;vue-config-js&quot;&gt;&lt;a href=&quot;#vue-config-js&quot; class=&quot;headerlink&quot; title=&quot;vue.config.js&quot;&gt;&lt;/a&gt;vue.config.js&lt;/h2&gt;&lt;h4 id=&quot;publicPath&quot;&gt;&lt;a
-        
-      
+      &lt;h2 id=&quot;vue-config-js&quot;&gt;&lt;a href=&quot;#vue-config-js&quot; class=&quot;headerlink&quot; title=&quot;vue.config.js&quot;&gt;&lt;/a&gt;vue.config.js&lt;/h2&gt;&lt;h4 id=&quot;publicPath&quot;&gt;&lt;a href=&quot;#publicPath&quot; class=&quot;headerlink&quot; title=&quot;publicPath&quot;&gt;&lt;/a&gt;publicPath&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;部署应用包时的基本URL,默认情况下,Vue CLI 会假设你的应用是被部署在一个域名的根路径上,例如 &lt;code&gt;https://www.my-app.com/&lt;/code&gt;。如果应用要被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 &lt;code&gt;https://www.my-app.com/my-app/&lt;/code&gt;，则设置 publicPath 为 &lt;code&gt;/my-app/&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;这个值也可以被设置为空字符串 (‘’) 或是相对路径 (‘./‘)，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径&lt;/p&gt;
     
     </summary>
     
@@ -94,17 +88,11 @@
     <link href="http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/</id>
     <published>2020-06-08T16:00:00.000Z</published>
-    <updated>2020-06-09T12:29:40.858Z</updated>
+    <updated>2020-06-13T09:29:00.467Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;git-bash-unix与linux风格的命令行-使用最多&quot;&gt;&lt;a href=&quot;#git-bash-unix与linux风格的命令行-使用最多&quot; class=&quot;headerlink&quot; title=&quot;git bash:
-        
-      
+      &lt;h3 id=&quot;git-bash-unix与linux风格的命令行-使用最多&quot;&gt;&lt;a href=&quot;#git-bash-unix与linux风格的命令行-使用最多&quot; class=&quot;headerlink&quot; title=&quot;git bash: unix与linux风格的命令行(使用最多)&quot;&gt;&lt;/a&gt;git bash: unix与linux风格的命令行(使用最多)&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd: 切换目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ~	回到home(最顶层目录)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd 		直接cd回到默认目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ..	回到上一级目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pwd		查看当前所在目录路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir hellow	新建一个文件夹(hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;touch index.js	新建一个文件(index.js)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv	移动文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv test hello	移动test文件到hello文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reset	重新初始化终端/清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clear	清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;history		查看历史动作&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;help	帮助&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit	退出命令框&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat hello	显示hello文件内容&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -121,17 +109,11 @@
     <link href="http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
     <published>2020-06-08T16:00:00.000Z</published>
-    <updated>2020-06-09T12:58:55.546Z</updated>
+    <updated>2020-06-13T09:29:32.449Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-对vue的理解&quot;&gt;&lt;a href=&quot;#1-对vue的理解&quot; class=&quot;headerlink&quot; title=&quot;1.对vue的理解&quot;&gt;&lt;/a&gt;1.对vue的理解&lt;/h2&gt;&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
+      &lt;h2 id=&quot;1-对vue的理解&quot;&gt;&lt;a href=&quot;#1-对vue的理解&quot; class=&quot;headerlink&quot; title=&quot;1.对vue的理解&quot;&gt;&lt;/a&gt;1.对vue的理解&lt;/h2&gt;&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -148,7 +130,7 @@
     <link href="http://yoursite.com/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/"/>
     <id>http://yoursite.com/2020/06/09/my%E9%9D%A2%E8%AF%95%E4%BB%A3%E7%A0%81%E9%A2%98/</id>
     <published>2020-06-08T16:00:00.000Z</published>
-    <updated>2020-06-09T13:00:16.082Z</updated>
+    <updated>2020-06-13T09:29:57.508Z</updated>
     
     <summary type="html">
     

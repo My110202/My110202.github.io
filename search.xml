@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Post</title>
+    <url>/2020/06/06/Post/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>list转成el-cascader级联</title>
     <url>/2020/06/09/JavaScript/</url>
     <content><![CDATA[]]></content>
@@ -12,32 +17,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Post</title>
-    <url>/2020/06/06/Post/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/06/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>git使用记录</title>
     <url>/2020/06/09/git%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">git config -l	查看现在的git环境的详细配置</span><br></pre></td></tr></table></figure>
 
@@ -95,12 +79,32 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/06/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>vue.config.js配置的理解</title>
     <url>/2020/06/11/vue.config.js/</url>
     <content><![CDATA[<h2 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h2><h4 id="publicPath"><a href="#publicPath" class="headerlink" title="publicPath"></a>publicPath</h4><ul>
 <li><p>部署应用包时的基本URL,默认情况下,Vue CLI 会假设你的应用是被部署在一个域名的根路径上,例如 <code>https://www.my-app.com/</code>。如果应用要被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 <code>https://www.my-app.com/my-app/</code>，则设置 publicPath 为 <code>/my-app/</code>。</p>
 </li>
 <li><p>这个值也可以被设置为空字符串 (‘’) 或是相对路径 (‘./‘)，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径</p>
+<a id="more"></a>
+
 </li>
 </ul>
 <h4 id="outputDir"><a href="#outputDir" class="headerlink" title="outputDir"></a>outputDir</h4><ul>
@@ -129,6 +133,8 @@
     <title>vue相关面试题</title>
     <url>/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
     <content><![CDATA[<h2 id="1-对vue的理解"><a href="#1-对vue的理解" class="headerlink" title="1.对vue的理解"></a>1.对vue的理解</h2><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br><span class="line">vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h2 id="2-框架和库的区别"><a href="#2-框架和库的区别" class="headerlink" title="2.框架和库的区别"></a>2.框架和库的区别</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">框架:是一套完整的解决方案;对项目的侵入性较大,项目如果需要更换框架,则需要重新架构整个项目</span><br><span class="line">库(插件):提供某一个小功能,对项目的侵入性较小,如果某个库无法完成某些需求,可以很容易的切换到其他库实         现需求</span><br></pre></td></tr></table></figure>
 
@@ -166,8 +172,12 @@
     <title>前端项目工具合集解读</title>
     <url>/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/</url>
     <content><![CDATA[<h2 id="1-vue-js"><a href="#1-vue-js" class="headerlink" title="1.vue.js"></a>1.vue.js</h2><h3 id="vue是什么"><a href="#vue是什么" class="headerlink" title="vue是什么"></a>vue是什么</h3><ul>
-<li>vue.js是一套用于构建用户界面的渐进式框架.</li>
-<li>简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.</li>
+<li><p>vue.js是一套用于构建用户界面的渐进式框架.</p>
+</li>
+<li><p>简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.  </p>
+<a id="more"></a>
+
+</li>
 </ul>
 <h3 id="vue的MVVM设计模式是什么"><a href="#vue的MVVM设计模式是什么" class="headerlink" title="vue的MVVM设计模式是什么"></a>vue的MVVM设计模式是什么</h3><ul>
 <li>mvvm 是 model(模型层) view(视图层) viewmodel(模型层与视图层的调度者)的缩写。mvvm提供了数据的双向绑定，通过双向数据绑定把model层和view层连接起来，不用操作dom。</li>
