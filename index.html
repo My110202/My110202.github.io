@@ -261,7 +261,7 @@
 
     
     <article
-  id="post-JavaScript"
+  id="post-list转成el-cascader数据结构"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -272,15 +272,15 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2020/06/12/JavaScript/"
-    >JavaScript</a> 
+  <a class="article-title" href="/2020/06/12/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+    >list转成el-cascader数据结构</a> 
 </h2>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/06/12/JavaScript/" class="article-date">
+      <a href="/2020/06/12/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="article-date">
   <time datetime="2020-06-12T04:53:19.012Z" itemprop="datePublished">2020-06-12</time>
 </a>    
     </div>
@@ -289,24 +289,13 @@
        
   <ul>
 <li><p>先看效果图</p>
-<p><img src="D:%5Cstudy%5Cmayue%5Csource_posts%5Cassets%5C1593410767423.png" alt="1593410767423"></p>
 </li>
-<li><p>再看实现方式</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">--</span> <span class="attr">html</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">el-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">"3"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">el-cascader</span></span></span><br><span class="line"><span class="tag">          <span class="attr">v-model</span>=<span class="string">"classify"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">size</span>=<span class="string">"mini"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">placeholder</span>=<span class="string">"所有班级"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:show-all-levels</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:props</span>=<span class="string">"classifyProps"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:options</span>=<span class="string">"classifyOptions"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">clearable</span> <span class="attr">style</span>=<span class="string">"width:100%"</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">change</span>=<span class="string">"selectChange"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-cascader</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      classify: [],</span><br><span class="line">      classifyProps: &#123;</span><br><span class="line">        value: <span class="string">'id'</span>,</span><br><span class="line">        label: <span class="string">'name'</span>,</span><br><span class="line">        children: <span class="string">'children'</span>,</span><br><span class="line">        expandTrigger: <span class="string">'hover'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      classifyData: [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'一年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'二年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'三年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">4</span>, <span class="attr">name</span>: <span class="string">'一年纪一班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">5</span>, <span class="attr">name</span>: <span class="string">'一年纪二班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">6</span>, <span class="attr">name</span>: <span class="string">'一年纪一班1组'</span>, <span class="attr">parent</span>: <span class="number">4</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">7</span>, <span class="attr">name</span>: <span class="string">'二年纪一班'</span>, <span class="attr">parent</span>: <span class="number">2</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">8</span>, <span class="attr">name</span>: <span class="string">'三年纪一班'</span>, <span class="attr">parent</span>: <span class="number">3</span> &#125;</span><br><span class="line">      ],</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">       classifyOptions () &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.listToCascader(<span class="keyword">this</span>.classifyData, <span class="literal">null</span>)</span><br><span class="line">       &#125;</span><br><span class="line">  	&#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        listToCascader (list, pid) &#123;</span><br><span class="line">          <span class="keyword">let</span> cascaderData = []</span><br><span class="line">          <span class="keyword">let</span> treeLst = list</span><br><span class="line">          treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">              <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">              <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">                treeLst[index].children = children</span><br><span class="line">              &#125;</span><br><span class="line">              cascaderData.push(treeLst[index])</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span> cascaderData</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>核心算法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 采用递归的方法</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">listToCascader</span> (<span class="params">list, pid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> cascaderData = []</span><br><span class="line">  <span class="keyword">let</span> treeLst = list</span><br><span class="line">  treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">      <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">      <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">        treeLst[index].children = children</span><br><span class="line">      &#125;</span><br><span class="line">      cascaderData.push(treeLst[index])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> cascaderData</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
- 
+<li><p><img src="D:%5Cstudy%5Cmayue%5Csource_posts%5Cassets%5CSnipaste_2020-06-29_14-25-14.png" alt=""></p>
+<p><img src="D:%5Cstudy%5Cmayue%5Csource_posts%5Cassets%5C1593410767423.png" alt="1593410767423"></p> 
+      <a class="article-more-link" href="/2020/06/12/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+        >阅读更多...</a
+      >
+       
       <!-- reward -->
       
     </div>
@@ -385,62 +374,6 @@
 
     
     <article
-  id="post-git命令"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
-    >git使用记录</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/09/git%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-06-08T16:00:00.000Z" itemprop="datePublished">2020-06-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
   id="post-vue相关面试题"
   class="article article-type-post"
   itemscope
@@ -486,6 +419,62 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+</article>
+
+    
+    <article
+  id="post-git命令"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
+    >git使用记录</a> 
+</h2>
+ 
+
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/06/09/git%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2020-06-08T16:00:00.000Z" itemprop="datePublished">2020-06-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure> 
+      <a class="article-more-link" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
 
     </footer>
   </div>
