@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/06/12/JavaScript/</loc>
+    
+    <lastmod>2020-06-29T06:18:30.179Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</loc>
+    
+    <lastmod>2020-06-23T07:01:12.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</loc>
+    
+    <lastmod>2020-06-19T03:24:28.452Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/06/11/vue.config.js/</loc>
+    
+    <lastmod>2020-06-15T10:34:19.965Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2020-06-13T09:29:32.449Z</lastmod>
@@ -16,23 +44,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/06/11/vue.config.js/</loc>
-    
-    <lastmod>2020-06-13T09:27:32.552Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/</loc>
     
     <lastmod>2020-06-13T09:26:39.179Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/06/09/JavaScript/</loc>
-    
-    <lastmod>2020-06-12T04:56:17.677Z</lastmod>
     
   </url>
   
