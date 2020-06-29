@@ -6,6 +6,81 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/06/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>listTocascader列表转换成树</title>
+    <url>/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+    <content><![CDATA[<ul>
+<li><p>先看效果图</p>
+<p><img src="https://pic.downk.cc/item/5ef9913e14195aa594195384.png" alt=""></p>
+</li>
+</ul>
+<a id="more"></a>
+
+<ul>
+<li><p>再看实现方式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">--</span> <span class="attr">html</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">el-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">"3"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">el-cascader</span></span></span><br><span class="line"><span class="tag">          <span class="attr">v-model</span>=<span class="string">"classify"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">size</span>=<span class="string">"mini"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">placeholder</span>=<span class="string">"所有班级"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:show-all-levels</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:props</span>=<span class="string">"classifyProps"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:options</span>=<span class="string">"classifyOptions"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">clearable</span> <span class="attr">style</span>=<span class="string">"width:100%"</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">change</span>=<span class="string">"selectChange"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-cascader</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      classify: [],</span><br><span class="line">      classifyProps: &#123;</span><br><span class="line">        value: <span class="string">'id'</span>,</span><br><span class="line">        label: <span class="string">'name'</span>,</span><br><span class="line">        children: <span class="string">'children'</span>,</span><br><span class="line">        expandTrigger: <span class="string">'hover'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      classifyData: [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'一年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'二年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'三年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">4</span>, <span class="attr">name</span>: <span class="string">'一年纪一班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">5</span>, <span class="attr">name</span>: <span class="string">'一年纪二班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">6</span>, <span class="attr">name</span>: <span class="string">'一年纪一班1组'</span>, <span class="attr">parent</span>: <span class="number">4</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">7</span>, <span class="attr">name</span>: <span class="string">'二年纪一班'</span>, <span class="attr">parent</span>: <span class="number">2</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">8</span>, <span class="attr">name</span>: <span class="string">'三年纪一班'</span>, <span class="attr">parent</span>: <span class="number">3</span> &#125;</span><br><span class="line">      ],</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">       classifyOptions () &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.listToCascader(<span class="keyword">this</span>.classifyData, <span class="literal">null</span>)</span><br><span class="line">       &#125;</span><br><span class="line">  	&#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        listToCascader (list, pid) &#123;</span><br><span class="line">          <span class="keyword">let</span> cascaderData = []</span><br><span class="line">          <span class="keyword">let</span> treeLst = list</span><br><span class="line">          treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">              <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">              <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">                treeLst[index].children = children</span><br><span class="line">              &#125;</span><br><span class="line">              cascaderData.push(treeLst[index])</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span> cascaderData</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>核心算法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 采用递归的方法</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">listToCascader</span> (<span class="params">list, pid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> cascaderData = []</span><br><span class="line">  <span class="keyword">let</span> treeLst = list</span><br><span class="line">  treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">      <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">      <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">        treeLst[index].children = children</span><br><span class="line">      &#125;</span><br><span class="line">      cascaderData.push(treeLst[index])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> cascaderData</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>element-ui相关</category>
+      </categories>
+      <tags>
+        <tag>vue element</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-element父组件中验证子组件表单</title>
+    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
+      <categories>
+        <category>element-ui相关</category>
+      </categories>
+      <tags>
+        <tag>vue element</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用$route打开新的窗口</title>
+    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vue相关</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git使用记录</title>
     <url>/2020/06/09/git%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
@@ -68,62 +143,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/06/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>list转成el-cascader数据结构</title>
-    <url>/2020/06/12/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
-    <content><![CDATA[<ul>
-<li><p>先看效果图</p>
-<p><img src="https://pic.downk.cc/item/5ef9913e14195aa594195384.png" alt=""></p>
-</li>
-</ul>
-<a id="more"></a>
-
-<ul>
-<li><p>再看实现方式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">--</span> <span class="attr">html</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">el-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">"3"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">el-cascader</span></span></span><br><span class="line"><span class="tag">          <span class="attr">v-model</span>=<span class="string">"classify"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">size</span>=<span class="string">"mini"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">placeholder</span>=<span class="string">"所有班级"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:show-all-levels</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:props</span>=<span class="string">"classifyProps"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:options</span>=<span class="string">"classifyOptions"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">clearable</span> <span class="attr">style</span>=<span class="string">"width:100%"</span></span></span><br><span class="line"><span class="tag">          @<span class="attr">change</span>=<span class="string">"selectChange"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-cascader</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">      classify: [],</span><br><span class="line">      classifyProps: &#123;</span><br><span class="line">        value: <span class="string">'id'</span>,</span><br><span class="line">        label: <span class="string">'name'</span>,</span><br><span class="line">        children: <span class="string">'children'</span>,</span><br><span class="line">        expandTrigger: <span class="string">'hover'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      classifyData: [</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">'一年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">'二年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">'三年纪'</span>, <span class="attr">parent</span>: <span class="literal">null</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">4</span>, <span class="attr">name</span>: <span class="string">'一年纪一班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">5</span>, <span class="attr">name</span>: <span class="string">'一年纪二班'</span>, <span class="attr">parent</span>: <span class="number">1</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">6</span>, <span class="attr">name</span>: <span class="string">'一年纪一班1组'</span>, <span class="attr">parent</span>: <span class="number">4</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">7</span>, <span class="attr">name</span>: <span class="string">'二年纪一班'</span>, <span class="attr">parent</span>: <span class="number">2</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">id</span>: <span class="number">8</span>, <span class="attr">name</span>: <span class="string">'三年纪一班'</span>, <span class="attr">parent</span>: <span class="number">3</span> &#125;</span><br><span class="line">      ],</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">       classifyOptions () &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="keyword">this</span>.listToCascader(<span class="keyword">this</span>.classifyData, <span class="literal">null</span>)</span><br><span class="line">       &#125;</span><br><span class="line">  	&#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        listToCascader (list, pid) &#123;</span><br><span class="line">          <span class="keyword">let</span> cascaderData = []</span><br><span class="line">          <span class="keyword">let</span> treeLst = list</span><br><span class="line">          treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">              <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">              <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">                treeLst[index].children = children</span><br><span class="line">              &#125;</span><br><span class="line">              cascaderData.push(treeLst[index])</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="keyword">return</span> cascaderData</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>核心算法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 采用递归的方法</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">listToCascader</span> (<span class="params">list, pid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> cascaderData = []</span><br><span class="line">  <span class="keyword">let</span> treeLst = list</span><br><span class="line">  treeLst.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (item.parent === pid) &#123;</span><br><span class="line">      <span class="keyword">const</span> children = <span class="keyword">this</span>.listToCascader(treeLst, item.id)</span><br><span class="line">      <span class="keyword">if</span> (children &amp;&amp; (children.length &gt; <span class="number">0</span>)) &#123;</span><br><span class="line">        treeLst[index].children = children</span><br><span class="line">      &#125;</span><br><span class="line">      cascaderData.push(treeLst[index])</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> cascaderData</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>vue-element父组件中验证子组件表单</title>
-    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
-      <categories>
-        <category>element-ui相关</category>
-      </categories>
-      <tags>
-        <tag>vue element</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vue相关面试题</title>
     <url>/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
     <content><![CDATA[<h2 id="1-对vue的理解"><a href="#1-对vue的理解" class="headerlink" title="1.对vue的理解"></a>1.对vue的理解</h2><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br><span class="line">vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br></pre></td></tr></table></figure>
@@ -157,19 +176,6 @@
 ]]></content>
       <categories>
         <category>web前端面试</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用$route打开新的窗口</title>
-    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>vue相关</category>
       </categories>
       <tags>
         <tag>vue</tag>
