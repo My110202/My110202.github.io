@@ -6,6 +6,24 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/06/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>git使用记录</title>
     <url>/2020/06/09/git%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure>
@@ -68,6 +86,34 @@
       </tags>
   </entry>
   <entry>
+    <title>使用$route打开新的窗口</title>
+    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vue相关</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-element父组件中验证子组件表单</title>
+    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
+      <categories>
+        <category>element-ui相关</category>
+      </categories>
+      <tags>
+        <tag>vue element</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>listTocascader列表转换成树</title>
     <url>/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
     <content><![CDATA[<ul>
@@ -95,39 +141,6 @@
       <tags>
         <tag>vue element</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>vue-element父组件中验证子组件表单</title>
-    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
-      <categories>
-        <category>element-ui相关</category>
-      </categories>
-      <tags>
-        <tag>vue element</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/06/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>前端项目工具合集解读</title>
@@ -220,19 +233,6 @@
 ]]></content>
       <categories>
         <category>web前端面试</category>
-      </categories>
-      <tags>
-        <tag>vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用$route打开新的窗口</title>
-    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>vue相关</category>
       </categories>
       <tags>
         <tag>vue</tag>
