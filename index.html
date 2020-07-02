@@ -1,987 +1,198 @@
-<!DOCTYPE html>
-
-
-<html lang="zh-CN">
-
-
-<head>
-  <meta charset="utf-8" />
-   
-  <meta name="keywords" content="坚持学习" />
-   
-  <meta name="description" content="记录你我" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>
-     Mayue
-  </title>
-  <meta name="generator" content="hexo-theme-ayer">
-  
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  
-<link rel="stylesheet" href="/dist/main.css">
-
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css">
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-  
-<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-
-  
-  
-
-  
-
-<link rel="alternate" href="/atom.xml" title="Mayue" type="application/atom+xml">
-</head>
-
-</html>
-
-<body>
-  <div id="app">
-    
-      
-      <canvas width="1777" height="841"
-        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
-      
-    <main class="content on">
-      
-<section class="cover">
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover3.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">Mayue</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-        <img
-          src="/images/ayer.svg"
-          class="cover-logo"
-          alt="Mayue"
-        />
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    
-    
-    
-    <article
-  id="post-list转成el-cascader数据结构"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-    >listTocascader列表转换成树</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="article-date">
-  <time datetime="2020-06-28T16:00:00.000Z" itemprop="datePublished">2020-06-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/element-ui%E7%9B%B8%E5%85%B3/">element-ui相关</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <ul>
-<li><p>先看效果图</p>
-<p><img src="https://pic.downk.cc/item/5ef9913e14195aa594195384.png" alt=""></p>
-</li>
-</ul> 
-      <a class="article-more-link" href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-element/" rel="tag">vue element</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-使用$router打开新的窗口"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/"
-    >使用$route打开新的窗口</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/" class="article-date">
-  <time datetime="2020-06-22T16:00:00.000Z" itemprop="datePublished">2020-06-23</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-vue-element父组件中验证子组件表单"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/"
-    >vue-element父组件中验证子组件表单</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/" class="article-date">
-  <time datetime="2020-06-18T16:00:00.000Z" itemprop="datePublished">2020-06-19</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/element-ui%E7%9B%B8%E5%85%B3/">element-ui相关</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2> 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-element/" rel="tag">vue element</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-前端工具合集解读"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/"
-    >前端项目工具合集解读</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/" class="article-date">
-  <time datetime="2020-06-12T16:00:00.000Z" itemprop="datePublished">2020-06-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-vue-js"><a href="#1-vue-js" class="headerlink" title="1.vue.js"></a>1.vue.js</h2><h3 id="vue是什么"><a href="#vue是什么" class="headerlink" title="vue是什么"></a>vue是什么</h3><ul>
-<li><p>vue.js是一套用于构建用户界面的渐进式框架.</p>
-</li>
-<li><p>简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.  </p> 
-      <a class="article-more-link" href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-vueCLI-webpack-node-js/" rel="tag">vue vueCLI webpack node.js</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-vue.config.js"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/11/vue.config.js/"
-    >vue.config.js配置的理解</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/11/vue.config.js/" class="article-date">
-  <time datetime="2020-06-10T16:00:00.000Z" itemprop="datePublished">2020-06-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="vue-config-js"><a href="#vue-config-js" class="headerlink" title="vue.config.js"></a>vue.config.js</h2><h3 id="publicPath"><a href="#publicPath" class="headerlink" title="publicPath"></a>publicPath</h3><ul>
-<li><p>部署应用包时的基本URL,默认情况下,Vue CLI 会假设你的应用是被部署在一个域名的根路径上,例如 <code>https://www.my-app.com/</code>。如果应用要被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 <code>https://www.my-app.com/my-app/</code>，则设置 publicPath 为 <code>/my-app/</code>。</p>
-</li>
-<li><p>这个值也可以被设置为空字符串 (‘’) 或是相对路径 (‘./‘)，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径</p> 
-      <a class="article-more-link" href="/2020/06/11/vue.config.js/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue-webpack/" rel="tag">vue webpack</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-git命令"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
-    >git使用记录</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/09/git%E5%91%BD%E4%BB%A4/" class="article-date">
-  <time datetime="2020-06-08T16:00:00.000Z" itemprop="datePublished">2020-06-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="git-bash-unix与linux风格的命令行-使用最多"><a href="#git-bash-unix与linux风格的命令行-使用最多" class="headerlink" title="git bash: unix与linux风格的命令行(使用最多)"></a>git bash: unix与linux风格的命令行(使用最多)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">cd: 切换目录</span><br><span class="line">cd ~	回到home(最顶层目录)</span><br><span class="line">cd 		直接cd回到默认目录</span><br><span class="line">cd ..	回到上一级目录</span><br><span class="line">pwd		查看当前所在目录路径</span><br><span class="line">ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)</span><br><span class="line">mkdir hellow	新建一个文件夹(hello文件夹)</span><br><span class="line">touch index.js	新建一个文件(index.js)</span><br><span class="line">rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)</span><br><span class="line">mv	移动文件</span><br><span class="line">mv test hello	移动test文件到hello文件夹</span><br><span class="line">reset	重新初始化终端/清屏</span><br><span class="line">clear	清屏</span><br><span class="line">history		查看历史动作</span><br><span class="line">help	帮助</span><br><span class="line">exit	退出命令框</span><br><span class="line">cat hello	显示hello文件内容</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-vue相关面试题"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"
-    >vue相关面试题</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" class="article-date">
-  <time datetime="2020-06-08T16:00:00.000Z" itemprop="datePublished">2020-06-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">web前端面试</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-对vue的理解"><a href="#1-对vue的理解" class="headerlink" title="1.对vue的理解"></a>1.对vue的理解</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br><span class="line">vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率</span><br></pre></td></tr></table></figure> 
-      <a class="article-more-link" href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="my-Post"
-  class="article article-type-my"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/06/Post/"
-    >Post</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/06/Post/" class="article-date">
-  <time datetime="2020-06-06T15:38:09.000Z" itemprop="datePublished">2020-06-06</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-   
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-    <article
-  id="post-hello-world"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/06/06/hello-world/"
-    >Hello World</a> 
-</h2>
- 
-
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/06/06/hello-world/" class="article-date">
-  <time datetime="2020-06-06T13:28:40.503Z" itemprop="datePublished">2020-06-06</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-   
-</article>
-
-    
-  </article>
-  
-
-  
-</section>
-</div>
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2015-2020
-        <i class="ri-heart-fill heart_icon"></i> Mayue
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
-        <span class="division">|</span>
-        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></s>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
-      </li>
-    </ul>
-  </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
-</div>
-
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
-</div>
-
-      </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Mayue"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="http://shenyu-vip.lofter.com" target="_blank" rel="noopener">摄影</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <script>
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        document.querySelector('.content').classList.remove('on');
-        document.querySelector('.sidebar').classList.remove('on');
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mayue - 每天都要记得学习哦</title><meta name="description" content="记录你我"><meta name="keywords" content="坚持学习"><meta name="author" content="Mayue"><meta name="copyright" content="Mayue"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Mayue"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="Mayue"><meta property="og:description" content="记录你我"><meta property="og:image" content="http://yoursite.com/img/avatar.png"><meta property="article:published_time" content="2020-07-02T08:04:30.515Z"><meta property="article:modified_time" content="2020-07-02T08:04:30.515Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
       }
-    </script>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    
-  </div>
-</div>
-    
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Subtitle -->
-
-<script>
-  try {
-    var typed = new Typed("#subtitle", {
-      strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
-      startDelay: 0,
-      typeSpeed: 200,
-      loop: true,
-      backSpeed: 100,
-      showCursor: true
-    });
-  } catch (err) {
-    console.log(err)
-  }
-</script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
-<script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script>
-
-<!-- MathJax -->
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Mayue" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Mayue</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Mayue</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="listTocascader列表转换成树">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="listTocascader列表转换成树"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="listTocascader列表转换成树">listTocascader列表转换成树</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-29 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-29</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/element-ui%E7%9B%B8%E5%85%B3/">element-ui相关</a></span></div><div class="content">
+先看效果图
 
 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
 
 
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<!-- ClickBoom2 -->
 
 
-<script src="/js/clickBoom2.js"></script>
+再看实现方式
+123456789101112131415&lt;-- html --&gt; &lt;el-row&gt;    &lt;el-col :span="3"&gt;       &lt;el-cascader          v-model="classify"          size="mini"          placeholder="所有班级"          :show-all-levels="false"          :props="classifyProps"          :options="classifyOptions"           clearable style="width:100%"          @change="selectChange"&gt;        &lt;/el-cascader&gt;     &lt;/el-col&gt; &lt;/el-row&gt;
+
+12345678910111213141516171819202122232425262728293031323 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/" title="使用$route打开新的窗口">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用$route打开新的窗口"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/" title="使用$route打开新的窗口">使用$route打开新的窗口</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-23 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-23</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a></span></div><div class="content">1234let routeData = this.$router.resolve(&#123;path: `detail/12`,query:&#123;status: 'published'&#125;)window.open(routeData.href, '_blank')//resolve方法会返回一个跳转路由对象
+
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/" title="vue-element父组件中验证子组件表单">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue-element父组件中验证子组件表单"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/" title="vue-element父组件中验证子组件表单">vue-element父组件中验证子组件表单</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-19 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-19</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/element-ui%E7%9B%B8%E5%85%B3/">element-ui相关</a></span></div><div class="content">子组件1vue
 
 
-<!-- CodeCopy -->
+
+父组件</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/" title="前端项目工具合集解读">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端项目工具合集解读"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/" title="前端项目工具合集解读">前端项目工具合集解读</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-13 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-13</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a></span></div><div class="content">1.vue.jsvue是什么
+vue.js是一套用于构建用户界面的渐进式框架.
+
+简单理解就是一个前端框架, 是一个已经搭建好的框架, 与jQuery库相比, 可以更好的实现代码复用, 减少工作量.  
 
 
-<link rel="stylesheet" href="/css/clipboard.css">
-
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-    }
-    initCopyCode();
-  }(window, document);
-</script>
 
 
-<!-- CanvasBackground -->
+vue的MVVM设计模式是什么
+mvvm 是 model(模型层) view(视图层) viewmodel(模型层与视图层的调度者)的缩写。mvvm提供了数据的双向绑定，通过双向数据绑定把model层和view层连接起来，不用操作dom。
+
+vue的两个核心
+1.响应式的数据绑定：当数据发生改变，视图可以自动更新，可以不用关心dom操作，而专心数据处理。
+2.可组合的视图组件：一个页面可以看作是若干个小的组件组合拼接而成，并且小的组件也方便的复用。
+
+2.vueCLIvuecli是什么
+vueCLI是用于快速vue.js开发的完整系统.
+
+使用vuecli的目的
+1.提供了零配置快速原型
+2.提供了运行时依赖
+3.提供了丰富的官方插件库
+4.完整的图形用户界面。
+
+3.webpackwebpack是什么
+webpack 是一个现代 JavaScript 应用程序的静态模块打包器 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/11/vue.config.js/" title="vue.config.js配置的理解">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue.config.js配置的理解"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/11/vue.config.js/" title="vue.config.js配置的理解">vue.config.js配置的理解</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-11 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-11</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/vue%E7%9B%B8%E5%85%B3/">vue相关</a></span></div><div class="content">vue.config.jspublicPath
+部署应用包时的基本URL,默认情况下,Vue CLI 会假设你的应用是被部署在一个域名的根路径上,例如 https://www.my-app.com/。如果应用要被部署在一个子路径上，你就需要用这个选项指定这个子路径。例如，如果你的应用被部署在 https://www.my-app.com/my-app/，则设置 publicPath 为 /my-app/。
+
+这个值也可以被设置为空字符串 (‘’) 或是相对路径 (‘./‘)，这样所有的资源都会被链接为相对路径，这样打出来的包可以被部署在任意路径
 
 
-    
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
-</div>
 
-<style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
-    
-  </div>
-</body>
 
-</html>
+outputDir
+默认值: dist
+当运行vue-cli-service build时生成的生产环境构建文件的目录, 每次目标目录在构建之前会被清除 (构建时传入 --no-clean 可关闭该行为)。
+
+assetsDir
+默认值: 空字符串&#39;&#39;
+放置生成的静态资源(js, css, img, fonts) 的目录
+
+indexPath
+默认值: &#39;index.html&#39;
+指定打包生成的index. ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/09/git%E5%91%BD%E4%BB%A4/" title="git使用记录">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git使用记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/09/git%E5%91%BD%E4%BB%A4/" title="git使用记录">git使用记录</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-09 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a></span></div><div class="content">git bash: unix与linux风格的命令行(使用最多)1234567891011121314151617cd: 切换目录cd ~	回到home(最顶层目录)cd 		直接cd回到默认目录cd ..	回到上一级目录pwd		查看当前所在目录路径ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)mkdir hellow	新建一个文件夹(hello文件夹)touch index.js	新建一个文件(index.js)rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)mv	移动文件mv test hello	移动test文件到hello文件夹reset	重新初始化终端/清屏clear	清屏history		查看历史动作help	帮助exit	退出命令框cat hello	显示hello文件内容
+
+
+
+git配置1git config -l	查看现在的git环境的详细配置
+
+git工作流程12345671.在工作目录中添加,修改文件2.将需要进行版本管理的文件放入暂存区3.将暂存区的文件提交到git仓库因此,git管理的文件由三 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" title="vue相关面试题">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue相关面试题"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/" title="vue相关面试题">vue相关面试题</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-09 00:00:00"><i class="far fa-calendar-alt"></i>2020-06-09</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">web前端面试</a></span></div><div class="content">1.对vue的理解12vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率
+
+
+
+2.框架和库的区别12框架:是一套完整的解决方案;对项目的侵入性较大,项目如果需要更换框架,则需要重新架构整个项目库(插件):提供某一个小功能,对项目的侵入性较小,如果某个库无法完成某些需求,可以很容易的切换到其他库实         现需求
+
+3.Node(后端)的MVC 和 前端的MVVM之间的区别1234567MVC(Model模型层,主要处理数据 View视图层,就是前端页面 Controller控制器,处理业务逻辑) 是后端的分层     开发概念MVVM(Model-View-ViewModel的简写) 是前端视图层的分层开发思想,主要把每个页面分成了M V 和VM,VM是	MVVM思想的核心,因为VM是M和V之间的调度者	 M   ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/06/06/Post/" title="Post">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Post"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/06/Post/" title="Post">Post</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-06 23:38:09"><i class="far fa-calendar-alt"></i>2020-06-06</time></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/06/06/hello-world/" title="Hello World">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/06/06/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2020-06-06 21:28:40"><i class="far fa-calendar-alt"></i>2020-06-06</time></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Mayue</div><div class="author-info__description">记录你我</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">9</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">5</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">4</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:xxxxxx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-recent-item"><div class="aside-recent-post"><a href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="listTocascader列表转换成树" alt="listTocascader列表转换成树"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/06/29/list%E8%BD%AC%E6%88%90el-cascader%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="listTocascader列表转换成树">listTocascader列表转换成树</div><time class="aside-post_meta post-meta__date" title="发表于 2020-06-29 00:00:00">2020-06-29</time></div></a></div><div class="aside-recent-post"><a href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="使用$route打开新的窗口" alt="使用$route打开新的窗口"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/" title="使用$route打开新的窗口">使用$route打开新的窗口</div><time class="aside-post_meta post-meta__date" title="发表于 2020-06-23 00:00:00">2020-06-23</time></div></a></div><div class="aside-recent-post"><a href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vue-element父组件中验证子组件表单" alt="vue-element父组件中验证子组件表单"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/" title="vue-element父组件中验证子组件表单">vue-element父组件中验证子组件表单</div><time class="aside-post_meta post-meta__date" title="发表于 2020-06-19 00:00:00">2020-06-19</time></div></a></div><div class="aside-recent-post"><a href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="前端项目工具合集解读" alt="前端项目工具合集解读"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/06/13/%E5%89%8D%E7%AB%AF%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86%E8%A7%A3%E8%AF%BB/" title="前端项目工具合集解读">前端项目工具合集解读</div><time class="aside-post_meta post-meta__date" title="发表于 2020-06-13 00:00:00">2020-06-13</time></div></a></div><div class="aside-recent-post"><a href="/2020/06/11/vue.config.js/"><div class="aside-post-cover"><img class="aside-post-bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="vue.config.js配置的理解" alt="vue.config.js配置的理解"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/06/11/vue.config.js/" title="vue.config.js配置的理解">vue.config.js配置的理解</div><time class="aside-post_meta post-meta__date" title="发表于 2020-06-11 00:00:00">2020-06-11</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/element-ui%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">element-ui相关</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/vue%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">vue相关</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">web前端</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"><span class="card-category-list-name">web前端面试</span><span class="card-category-list-count">1</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/git/" style="font-size: 16px; color: #999">git</a> <a href="/tags/vue/" style="font-size: 22px; color: #99a9bf">vue</a> <a href="/tags/vue-element/" style="font-size: 22px; color: #99a9bf">vue element</a> <a href="/tags/vue-vueCLI-webpack-node-js/" style="font-size: 16px; color: #999">vue vueCLI webpack node.js</a> <a href="/tags/vue-webpack/" style="font-size: 16px; color: #999">vue webpack</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/06/"><span class="card-archive-list-date">六月 2020</span><span class="card-archive-list-count">9</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">9</div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Mayue</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleEffect = true
+if (subtitleEffect) { 
+  var typed = new Typed("#subtitle", {
+    strings: "今日事&#44;今日畢,Never put off till tomorrow what you can do today".split(","),
+    startDelay: 300,
+    typeSpeed: 150,
+    loop: true,
+    backSpeed: 50
+  })
+} else {
+  document.getElementById("subtitle").innerHTML = '今日事&#44;今日畢'
+}</script></body></html>
