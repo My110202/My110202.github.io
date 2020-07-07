@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-29T07:07:42.765Z</updated>
+  <updated>2020-07-07T08:36:50.650Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,107 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>http状态码</title>
+    <link href="http://yoursite.com/2020/07/07/http%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <id>http://yoursite.com/2020/07/07/http%E7%8A%B6%E6%80%81%E7%A0%81/</id>
+    <published>2020-07-06T16:00:00.000Z</published>
+    <updated>2020-07-07T08:36:50.650Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;成功响应&lt;br&gt;200 OK(成功)&lt;br&gt;201 Created(已创建)&lt;br&gt;202 Accepted(已创建)&lt;br&gt;203 Non-Authoritative Information(未授权信息)&lt;br&gt;204 No Content(无内容)&lt;br&gt;205
+        
+      
+    
+    </summary>
+    
+    
+      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="浏览器" scheme="http://yoursite.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue的$nextTick用法</title>
+    <link href="http://yoursite.com/2020/07/02/vue%E7%9A%84$nextTick%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2020/07/02/vue%E7%9A%84$nextTick%E7%94%A8%E6%B3%95/</id>
+    <published>2020-07-01T16:00:00.000Z</published>
+    <updated>2020-07-07T08:35:19.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用场景&lt;/p&gt;
+&lt;p&gt;我常用的场景是在进行获取数据后，需要对新视图进行下一步操作或者其他操作时，发现获取不到dom。因为赋值操作只完成了数据模型的改变并没有完成视图更新。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="vue相关" scheme="http://yoursite.com/categories/vue%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue style scoped情况下覆盖组件样式</title>
+    <link href="http://yoursite.com/2020/07/01/vue%20style%E6%A0%B7%E5%BC%8F%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>http://yoursite.com/2020/07/01/vue%20style%E6%A0%B7%E5%BC%8F%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <published>2020-06-30T16:00:00.000Z</published>
+    <updated>2020-07-07T08:35:56.333Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 vue 中，为了防止 css 污染，会在&lt;code&gt;style&lt;/code&gt;标签上添加一个&lt;code&gt;scoped&lt;/code&gt;属性。所以，如果在父组件将 style 设置为&lt;code&gt;scoped&lt;/code&gt;的时，如果想改变该父组件中引入的子组件样式，则不会生效。如&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="vue相关" scheme="http://yoursite.com/categories/vue%E7%9B%B8%E5%85%B3/"/>
+    
+    
+      <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git clone 报错</title>
+    <link href="http://yoursite.com/2020/06/29/git%E6%8A%A5%E9%94%99/"/>
+    <id>http://yoursite.com/2020/06/29/git%E6%8A%A5%E9%94%99/</id>
+    <published>2020-06-28T16:00:00.000Z</published>
+    <updated>2020-07-07T08:33:36.074Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;git-clone-时报错&quot;&gt;&lt;a href=&quot;#git-clone-时报错&quot; class=&quot;headerlink&quot; title=&quot;git clone 时报错&quot;&gt;&lt;/a&gt;git clone 时报错&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;error: RPC failed;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>listTocascader列表转换成树</title>
@@ -54,7 +155,7 @@
       
         
         
-          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+          &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; routeData = &lt;span
         
       
     
@@ -144,27 +245,6 @@
   </entry>
   
   <entry>
-    <title>git使用记录</title>
-    <link href="http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/</id>
-    <published>2020-06-08T16:00:00.000Z</published>
-    <updated>2020-06-13T09:29:00.467Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;git-bash-unix与linux风格的命令行-使用最多&quot;&gt;&lt;a href=&quot;#git-bash-unix与linux风格的命令行-使用最多&quot; class=&quot;headerlink&quot; title=&quot;git bash: unix与linux风格的命令行(使用最多)&quot;&gt;&lt;/a&gt;git bash: unix与linux风格的命令行(使用最多)&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd: 切换目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ~	回到home(最顶层目录)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd 		直接cd回到默认目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ..	回到上一级目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pwd		查看当前所在目录路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir hellow	新建一个文件夹(hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;touch index.js	新建一个文件(index.js)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv	移动文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv test hello	移动test文件到hello文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reset	重新初始化终端/清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clear	清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;history		查看历史动作&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;help	帮助&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit	退出命令框&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat hello	显示hello文件内容&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>vue相关面试题</title>
     <link href="http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://yoursite.com/2020/06/09/vue%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
@@ -173,7 +253,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;1-对vue的理解&quot;&gt;&lt;a href=&quot;#1-对vue的理解&quot; class=&quot;headerlink&quot; title=&quot;1.对vue的理解&quot;&gt;&lt;/a&gt;1.对vue的理解&lt;/h2&gt;&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;h2 id=&quot;1-对vue的理解&quot;&gt;&lt;a href=&quot;#1-对vue的理解&quot; class=&quot;headerlink&quot; title=&quot;1.对vue的理解&quot;&gt;&lt;/a&gt;1.对vue的理解&lt;/h2&gt;&lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vue: vue核心的一个概念,就是让用户不在操作dom元素,让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vue 是什么是一套前端开发框架(侧重的是业务逻辑),不用考虑怎么操作dom,只要考虑逻辑和数据,也就是响应式数据,数据改了,不用改代码,界面也立刻就变了.因此让程序员有更多的时间去关注业务逻辑,提高开发效率&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -182,6 +262,27 @@
     
     
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git使用记录</title>
+    <link href="http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2020/06/09/git%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-06-08T16:00:00.000Z</published>
+    <updated>2020-07-03T03:45:02.570Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;git-bash-unix与linux风格的命令行-使用最多&quot;&gt;&lt;a href=&quot;#git-bash-unix与linux风格的命令行-使用最多&quot; class=&quot;headerlink&quot; title=&quot;git bash: unix与linux风格的命令行(使用最多)&quot;&gt;&lt;/a&gt;git bash: unix与linux风格的命令行(使用最多)&lt;/h3&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cd: 切换目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ~	回到home(最顶层目录)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd 		直接cd回到默认目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd ..	回到上一级目录&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pwd		查看当前所在目录路径&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;ls(ll)	都是列出当前目录中的所有文件,区别是ll列出的内容更为详细(包括时间)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mkdir hellow	新建一个文件夹(hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;touch index.js	新建一个文件(index.js)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;rm -r	删除一个文件夹(rm -r hello 删除hello文件夹)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv	移动文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;mv test hello	移动test文件到hello文件夹&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;reset	重新初始化终端/清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;clear	清屏&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;history		查看历史动作&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;help	帮助&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;exit	退出命令框&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat hello	显示hello文件内容&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="web前端" scheme="http://yoursite.com/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   

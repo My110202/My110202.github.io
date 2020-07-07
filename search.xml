@@ -54,6 +54,12 @@
 
 <h4 id="git-stash-show"><a href="#git-stash-show" class="headerlink" title="git stash show"></a>git stash show</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">显示stash的具体内容是什么,用法:git stash show stash@&#123;0&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="查看被修改的文件"><a href="#查看被修改的文件" class="headerlink" title="查看被修改的文件"></a>查看被修改的文件</h3><h4 id="1-git-status"><a href="#1-git-status" class="headerlink" title="1.git status"></a>1.git status</h4><ul>
+<li>git status 可以查看被修改的文件</li>
+<li><img src= "/img/loading.gif" data-src="D:%5Cstudy%5Cmayue%5Csource_posts%5Cassets%5C1593747890569.png" alt="1593747890569"></li>
+</ul>
 ]]></content>
       <categories>
         <category>web前端</category>
@@ -66,6 +72,23 @@
     <title>Post</title>
     <url>/2020/06/06/Post/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>git clone 报错</title>
+    <url>/2020/06/29/git%E6%8A%A5%E9%94%99/</url>
+    <content><![CDATA[<h3 id="git-clone-时报错"><a href="#git-clone-时报错" class="headerlink" title="git clone 时报错"></a>git clone 时报错</h3><ul>
+<li>error: RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054<br>fatal: the remote end hung up unexpectedly<br>fatal: early EOF<br>fatal: index-pack failed</li>
+</ul>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ul>
+<li>git config –global pack.windowMemory “100m”<br>git config –global pack.SizeLimit “100m”<br>git config –global pack.threads “1”<h2 id="git-config-–global-pack-window-“0”"><a href="#git-config-–global-pack-window-“0”" class="headerlink" title="git config –global pack.window “0”"></a>git config –global pack.window “0”</h2>版权声明：本文为CSDN博主「南有先生」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/shmily4992871/article/details/99439751" target="_blank" rel="noopener">https://blog.csdn.net/shmily4992871/article/details/99439751</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World</title>
@@ -84,21 +107,6 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>vue-element父组件中验证子组件表单</title>
-    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
-      <categories>
-        <category>element-ui相关</category>
-      </categories>
-      <tags>
-        <tag>vue element</tag>
-      </tags>
   </entry>
   <entry>
     <title>listTocascader列表转换成树</title>
@@ -130,9 +138,94 @@
       </tags>
   </entry>
   <entry>
-    <title>使用$route打开新的窗口</title>
-    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
+    <title>http状态码</title>
+    <url>/2020/07/07/http%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    <content><![CDATA[<p>成功响应<br>200 OK(成功)<br>201 Created(已创建)<br>202 Accepted(已创建)<br>203 Non-Authoritative Information(未授权信息)<br>204 No Content(无内容)<br>205 Reset Content(重置内容)<br>206 Partial Content(部分内容)<br>重定向<br>300 Multiple Choice(多种选择)<br>301 Moved Permanently(永久移动)<br>302 Found(临时移动)<br>303 See Other(查看其他位置)<br>304 Not Modified(未修改)<br>305 Use Proxy(使用代理)<br>306 (未使用)<br>307 Temporary Redirect(临时重定向)<br>308 Permanent Redirect(永久重定向)<br>客户端错误<br>400 Bad Request(错误请求)<br>401 Unauthorized(未授权)<br>402 Payment Required(需要付款)<br>403 Forbidden(禁止访问)<br>404 Not Found(未找到)<br>405 Method Not Allowed(不允许使用该方法)<br>406 Not Acceptable(无法接受)<br>407 Proxy Authentication Required(要求代理身份验证)<br>408 Request Timeout(请求超时)<br>409 Conflict(冲突)<br>410 Gone(已失效)<br>411 Length Required(需要内容长度头)<br>412 Precondition Failed(预处理失败)<br>413 Request Entity Too Large(请求实体过长)<br>414 Request-URI Too Long(请求网址过长)<br>415 Unsupported Media Type(媒体类型不支持)<br>416 Requested Range Not Satisfiable(请求范围不合要求)<br>417 Expectation Failed(预期结果失败)<br>服务器端错误<br>500 Internal Server Error(内部服务器错误)<br>501 Implemented(未实现)<br>502 Bad Gateway(网关错误)<br>503 Service Unavailable(服务不可用)<br>504 Gateway Timeout (网关超时)<br>505 HTTP Version Not Supported(HTTP 版本不受支持)<br>unused</p>
+]]></content>
+      <categories>
+        <category>web前端</category>
+      </categories>
+      <tags>
+        <tag>浏览器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue style scoped情况下覆盖组件样式</title>
+    <url>/2020/07/01/vue%20style%E6%A0%B7%E5%BC%8F%E6%B7%B1%E5%BA%A6%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
+    <content><![CDATA[<p>在 vue 中，为了防止 css 污染，会在<code>style</code>标签上添加一个<code>scoped</code>属性。所以，如果在父组件将 style 设置为<code>scoped</code>的时，如果想改变该父组件中引入的子组件样式，则不会生效。如</p>
+<a id="more"></a>
+
+<ul>
+<li><p>子组件中</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">--</span> 子组件<span class="attr">child</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span>&gt;</span>I am child component<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>父组件中</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">--</span> 父组件<span class="attr">parent</span> <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>parent<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">child</span>&gt;</span><span class="tag">&lt;/<span class="name">child</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line">.app h2 &#123; //此时在父组件中想要改变子组件h2的颜色,不会生效</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>解决方法</p>
+<ul>
+<li><p>1.如果使用的css,可以使用&gt;&gt;&gt;, 如果是scss等预处理器,就无法解析&gt;&gt;&gt;,则可用方法2</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-class">.app</span> &gt;&gt;&gt; <span class="selector-tag">h2</span> &#123;</span></span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>2.如果是scss或者less预处理,用/deep/</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"less"</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line">/deep/ .app &#123;</span><br><span class="line">  h2 &#123;</span><br><span class="line">    color: red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.如果用/deep/不行, 就用::v-deep</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;style lang&#x3D;&quot;less&quot; scoped&gt;</span><br><span class="line">.app &#123;</span><br><span class="line">    ::v-deep  h2 &#123;</span><br><span class="line">    color: red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>vue相关</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-element父组件中验证子组件表单</title>
+    <url>/2020/06/19/vue-element%E7%88%B6%E7%BB%84%E4%BB%B6%E4%B8%AD%E9%AA%8C%E8%AF%81%E5%AD%90%E7%BB%84%E4%BB%B6%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h2 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vue</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="父组件"><a href="#父组件" class="headerlink" title="父组件"></a>父组件</h2>]]></content>
+      <categories>
+        <category>element-ui相关</category>
+      </categories>
+      <tags>
+        <tag>vue element</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue的$nextTick用法</title>
+    <url>/2020/07/02/vue%E7%9A%84$nextTick%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<ul>
+<li><p>使用场景</p>
+<p>我常用的场景是在进行获取数据后，需要对新视图进行下一步操作或者其他操作时，发现获取不到dom。因为赋值操作只完成了数据模型的改变并没有完成视图更新。</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">    list: []</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.get()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="keyword">get</span>: function () &#123;</span><br><span class="line">      <span class="keyword">this</span>.$http.get(<span class="string">'/api/article'</span>).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.list = res.data.data.list</span><br><span class="line">        <span class="comment">// ref  list 引用了ul元素，我想把第一个li颜色变为红色</span></span><br><span class="line">        <span class="keyword">this</span>.$refs.list.getElementsByTagName(<span class="string">'li'</span>)[<span class="number">0</span>].style.color = <span class="string">'red'</span></span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如上例, 我在获取到数据后赋值给数据模型中list属性，然后我想引用ul元素找到第一个li把它的颜色变为红色，但是事实上，这个要报错了，我们知道，在执行这句话时，ul下面并没有li，也就是说刚刚进行的赋值操作，当前并没有引起视图层的更新。因此，在这样的情况下，vue给我们提供了$nextTick方法，如果我们想对未来更新后的视图进行操作，我们只需要把要执行的函数传递给this.$nextTick方法，vue就会给我们做这个工作。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">get</span>: function () &#123;</span><br><span class="line">     <span class="keyword">this</span>.$http.get(<span class="string">'/api/article'</span>).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.list = res.data.data.list</span><br><span class="line">     <span class="comment">// ref  list 引用了ul元素，我想把第一个li颜色变为红色</span></span><br><span class="line">         <span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">             <span class="keyword">this</span>.$refs.list.getElementsByTagName(<span class="string">'li'</span>)[<span class="number">0</span>].style.color =</span><br><span class="line">         &#125;)</span><br><span class="line">   &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 ]]></content>
       <categories>
@@ -176,6 +269,19 @@
 ]]></content>
       <categories>
         <category>web前端面试</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用$route打开新的窗口</title>
+    <url>/2020/06/23/%E4%BD%BF%E7%94%A8$router%E6%89%93%E5%BC%80%E6%96%B0%E7%9A%84%E7%AA%97%E5%8F%A3/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> routeData = <span class="keyword">this</span>.$router.resolve(&#123;<span class="attr">path</span>: <span class="string">`detail/12`</span>,<span class="attr">query</span>:&#123;<span class="attr">status</span>: <span class="string">'published'</span>&#125;)</span><br><span class="line"><span class="built_in">window</span>.open(routeData.href, <span class="string">'_blank'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//resolve方法会返回一个跳转路由对象</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>vue相关</category>
       </categories>
       <tags>
         <tag>vue</tag>
